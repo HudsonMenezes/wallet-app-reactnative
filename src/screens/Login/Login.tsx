@@ -9,7 +9,7 @@ import {
   ViewButton,
 } from "./styles";
 import { Text, SafeAreaView } from "react-native";
-import theme from "../../styles/theme";
+import ButtonSocialGoogle from "../../components/ButtonSocialGoogle/ButtonSocialGoogle";
 
 export default function Login() {
   return (
@@ -20,7 +20,10 @@ export default function Login() {
 
           <Description>Entrar com redes sociais</Description>
 
-          <ViewButton></ViewButton>
+          <ViewButton>
+            <ButtonSocialGoogle title="Google" />
+            <ButtonSocialGoogle title="Facebook" />
+          </ViewButton>
         </ContentHeader>
 
         <ContentBody></ContentBody>

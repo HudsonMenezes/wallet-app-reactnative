@@ -16,7 +16,10 @@ export const ContentBody = styled.View``;
 
 export const ContentFooter = styled.View``;
 
-export const ViewButton = styled.View``;
+export const ViewButton = styled.View`
+  flex-direction: row;
+  margin-top: ${RFValue(22)}px;
+`;
 
 export const Title = styled.Text`
   font-size: ${RFValue(25)}px;
