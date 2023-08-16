@@ -36,6 +36,7 @@ export default function Index() {
       }}
     >
       <Text>Wallet App</Text>
+      <Text>Teste</Text>
     </View>
   );
 }
