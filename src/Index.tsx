@@ -1,6 +1,7 @@
 import React from "react";
 import { Text, View } from "react-native";
 import AppLoading from "expo-app-loading";
+import { ThemeProvider } from "styled-components/native";
 
 import {
   useFonts,
@@ -13,6 +14,11 @@ import {
 
 import { DMSans_400Regular } from "@expo-google-fonts/dm-sans";
 import { DMSerifDisplay_400Regular } from "@expo-google-fonts/dm-serif-display";
+import { StatusBar } from "expo-status-bar";
+
+import COLORS from "../src/styles/theme";
+
+import Login from "./screens/Login/Login";
 
 export default function Index() {
   const [fontsLoaded] = useFonts({
@@ -28,15 +34,11 @@ export default function Index() {
   if (!fontsLoaded) return <AppLoading />;
 
   return (
-    <View
-      style={{
-        flex: 1,
-        justifyContent: "center",
-        alignItems: "center",
-      }}
-    >
-      <Text>Wallet App</Text>
-      <Text>Teste</Text>
-    </View>
+    <ThemeProvider theme={COLORS}>
+      <StatusBar style="dark" translucent backgroundColor="transparent" />
+      <View>
+        <Login />
+      </View>
+    </ThemeProvider>
   );
 }
